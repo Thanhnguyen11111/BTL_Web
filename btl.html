@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f2f4f7;
+            font-family:  Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+        .search-bar input, .search-bar select {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid rgb(123, 175, 244);
+            font-size: 13px;
+        }
+        .search-bar input {
+            width: 300px;
+        }
+        .search-bar select {
+            width: 150px;
+        }
+        .selection-book {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .book-card {
+            background: white;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .book-card h3 {
+            font-size: 17px;
+            margin: 10px 0 5px;
+        }
+        .statusgreen {
+            background: #3ca956;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+        .statusyellow {
+            background: #d5a311;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+        .statusred {
+            background: #cc3d3d;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+        button {
+            margin-top: 10px;
+            width: 80px;
+            padding: 8px;
+            background: #2f66d3;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- thanh tìm kiếm -->
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm sách theo tên...">
+            <select >
+                <option>Tất cả thể loại</option>
+                <option>Trinh thám</option>
+                <option>Tiểu thuyết</option>
+                <option>Khoa học</option>
+                <option>Lịch sử</option>
+                <option>Thiếu nhi</option>
+                <option>Tâm lý</option>
+                <option>Tình cảm</option>
+                <option>Truyện</option>
+                <option>Kinh dị</option>
+            </select>
+        </div>
+
+            <!-- lựa chọn sách -->
+            <div class="selection-book">
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Đắc Nhân Nâm</h3>
+                    <p>Tác giả: Dale Carnegie</p>
+                    <p>Thể loại: Kinh tế</p>
+                    <span class="statusgreen">Còn 15</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Sapiens: Lịch Sử Loài Người</h3>
+                    <p>Tác giả: Yuval Noah Harari</p>
+                    <p>Thể loại: Lịch sử</p>
+                    <span class="statusyellow">Còn 8</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Nhà Giả Kim</h3>
+                    <p>Tác giả: Paulo Coolho</p>
+                    <p>Thể loại: Văn học</p>
+                    <span class="statusgreen">Còn 12</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Vũ Trụ Trong Vỏ Hạt Dẻ</h3>
+                    <p>Tác giả: Stephen Hawking</p>
+                    <p>Thể loại: Khoa học</p>
+                    <span class="statusred">Còn 5</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Tuổi Thơ Dữ Dội</h3>
+                    <p>Tác giả: Phùng Quân</p>
+                    <p>Thể loại: Văn học</p>
+                    <span class="statusgreen">Còn 20</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Dế Mèn Phiêu Lưu Ký</h3>
+                    <p>Tác giả: Tô Hoài/p>
+                    <p>Thể loại: Thiếu nhi</p>
+                    <span class="statusgreen">Còn 25</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Thinging, Fast and Slow</h3>
+                    <p>Tác giả: daniel Kartmerrmam</p>
+                    <p>Thể loại: Khoa học</p>
+                    <span class="statusyellow">Còn 11</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Lịch Sử Việt Nam</h3>
+                    <p>Tác giả: Nhiều tác giả</p>
+                    <p>Thể loại: Lịch sử</p>
+                    <span class="statusgreen">Còn 16</span>
+                    <button>Mượn sách</button>
+                </div>
+                <div class="book-card">
+                    <img src="#">
+                    <h3>Rich Dad Poor Dad</h3>
+                    <p>Tác giả: Robert Kryosaki</p>
+                    <p>Thể loại: Kinh tế</p>
+                    <span class="statusgreen">Còn 18</span>
+                    <button>Mượn sách</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
