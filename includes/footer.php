@@ -17,10 +17,10 @@
                     <h3>FOLLOW CHÚNG TÔI</h3>
                     <div class="social-icon">
                         <a href="https://www.facebook.com/">
-                               <img src="fb.png" alt="">
+                               <i class="fa fa-facebook-square" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.youtube.com/">
-                               <img src="ytb.png" alt="">
+                               <i class="fa fa-youtube-play" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>

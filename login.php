@@ -1,3 +1,9 @@
+<?php 
+  session_start();
+  include ("includes/auth/authlogin.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,6 +52,13 @@
     background-color: #fff;
     border-radius: 30px;
     }
+    form{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    gap: 10px;
+    }
     .login-box h2{
      font-family: "Playwrite NO", cursive;
      margin-bottom: 20px;
@@ -60,6 +73,7 @@
     outline: 1px solid black;
     border-radius: 8px;
     border: none;
+    
     }
     .input-box input:focus{
     outline: 2px solid blue;
@@ -166,26 +180,31 @@
     </style>
   </head>
   <body>
-    <img class="bg" src="../img/book-wall-1151405_1280.jpg" alt="">
+    <img class="bg" src="Uploads/covers/pexels-minan1398-694740.jpg" alt="">
     <div class="login-box">
       <h2>Thư viên sách tuổi trẻ</h2>
 
-      <div class="input-box">
-        <input type="text" placeholder="Email hoặc tên đăng nhập" />
-      </div>
 
-      <div class="input-box">
-        <input type="password" placeholder="Mật khẩu" />
-      </div>
-      <div class="forgot">
-        <a href="">Quên mật khẩu ?</a>
-      </div>
-      <button class="btn btn-login">ĐĂNG NHẬP</button>
-      <button class="btn btn-google">
-        <i class="fa fa-google" aria-hidden="true"></i>
-        TIẾP TỤC VỚI GOOGLE
-      </button>
-      <hr />
+      <form action="login.php" method="post">
+        <div class="input-box">
+          <input name="username" type="text" placeholder="Email hoặc tên đăng nhập" />
+        </div>
+  
+        <div class="input-box">
+          <input name="password" type="password" placeholder="Mật khẩu" />
+          <p style="font-size: 13px; margin-top: 10px;font-weight: 600;"><?php echo $error ?></p>
+        </div>
+        <!-- <div class="forgot">
+          <a href="">Quên mật khẩu ?</a>
+        </div> -->
+          <input class="btn btn-google" type="submit" value="Đăng nhập">
+
+        <!-- <button class="btn btn-google">
+          <i class="fa fa-google" aria-hidden="true"></i>
+          TIẾP TỤC VỚI GOOGLE
+        </button> -->
+        <hr />
+      </form>
       <div class="sign-in">
         <p>Chưa có tài khoản ?</p>
         <button><a href="register.php">Đăng ký</a></button>
